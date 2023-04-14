@@ -1,5 +1,6 @@
-import { añadirArticulo } from "./funciones";
+import { input, validarInput } from "./funciones";
 
-const button = document.querySelector("#add-button") as HTMLButtonElement;
+// const button = document.querySelector("#add-button") as HTMLButtonElement;
+const formulario = document.querySelector("#formulario") as HTMLFormElement;
 
-button.addEventListener("click", añadirArticulo);
+formulario.addEventListener("submit", validarInput);

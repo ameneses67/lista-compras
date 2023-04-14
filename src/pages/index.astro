@@ -7,23 +7,26 @@ const title = "Listado de Compras";
 const description = "Administración del listado de compras";
 ---
 
-<MainLayout {title} {description}>
-  <div
-    class="p-8 bg-slate-50 flex flex-col gap-3 max-w-xs mx-auto border-4 border-black rounded-xl mb-8"
+<MainLayout title={title} description={description}>
+  <section
+    class="p-8 bg-slate-50 max-w-xs mx-auto border-4 border-black rounded-xl mb-8"
   >
     <Icon name="emojione:shopping-cart" class="w-40 mx-auto" />
-    <input
-      type="text"
-      id="input-field"
-      placeholder="Pan"
-      class="bg-zinc-200 text-zinc-500 placeholder:text-zinc-400 rounded-md border-none py-4 text-center text-xl"
-    />
-    <button
-      id="add-button"
-      class="bg-orange-900 text-white form-input rounded-md py-4 text-xl border-none"
-      >Añadir al carrito</button
-    >
-  </div>
+    <form id="formulario">
+      <input
+        type="text"
+        id="input-field"
+        placeholder="Pan"
+        class="bg-zinc-200 text-zinc-600 placeholder:text-zinc-400 rounded-md border-none py-4 text-center text-xl focus:outline-none focus-visible:outline-none w-full my-4"
+      />
+      <button
+        type="submit"
+        id="add-button"
+        class="bg-orange-900 hover:bg-orange-950 transition text-white form-input rounded-md py-4 w-full text-xl border-none"
+        >Añadir al carrito</button
+      >
+    </form>
+  </section>
   <Listado />
 </MainLayout>
 
